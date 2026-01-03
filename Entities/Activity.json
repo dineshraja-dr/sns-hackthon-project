@@ -1,0 +1,48 @@
+{
+  "name": "Activity",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Activity name"
+    },
+    "city_id": {
+      "type": "string",
+      "description": "Associated city ID"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "sightseeing",
+        "food",
+        "adventure",
+        "culture",
+        "shopping",
+        "relaxation",
+        "nightlife"
+      ],
+      "description": "Activity category"
+    },
+    "description": {
+      "type": "string",
+      "description": "Activity description"
+    },
+    "duration_hours": {
+      "type": "number",
+      "description": "Duration in hours"
+    },
+    "cost": {
+      "type": "number",
+      "description": "Estimated cost"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "Activity image URL"
+    }
+  },
+  "required": [
+    "name",
+    "city_id",
+    "category"
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "name": "CommunityPost",
+  "type": "object",
+  "properties": {
+    "trip_id": {
+      "type": "string",
+      "description": "Shared trip ID"
+    },
+    "author_name": {
+      "type": "string",
+      "description": "Author display name"
+    },
+    "author_email": {
+      "type": "string",
+      "description": "Author email"
+    },
+    "title": {
+      "type": "string",
+      "description": "Post title"
+    },
+    "description": {
+      "type": "string",
+      "description": "Post description"
+    },
+    "cover_image": {
+      "type": "string",
+      "description": "Cover image URL"
+    },
+    "likes": {
+      "type": "number",
+      "default": 0
+    },
+    "comments_count": {
+      "type": "number",
+      "default": 0
+    },
+    "destinations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of destinations"
+    }
+  },
+  "required": [
+    "trip_id",
+    "title"
+  ]
+}

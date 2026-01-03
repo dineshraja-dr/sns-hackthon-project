@@ -1,0 +1,62 @@
+{
+  "name": "Trip",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the trip"
+    },
+    "description": {
+      "type": "string",
+      "description": "Trip description"
+    },
+    "start_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Trip start date"
+    },
+    "end_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Trip end date"
+    },
+    "cover_image": {
+      "type": "string",
+      "description": "Cover image URL"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "planning",
+        "ongoing",
+        "completed"
+      ],
+      "default": "planning"
+    },
+    "total_budget": {
+      "type": "number",
+      "description": "Total estimated budget"
+    },
+    "is_public": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether the trip is shared publicly"
+    },
+    "likes_count": {
+      "type": "number",
+      "default": 0
+    },
+    "cities": {
+      "type": "array",
+      "description": "List of city IDs in the trip",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "name",
+    "start_date",
+    "end_date"
+  ]
+}

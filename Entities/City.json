@@ -1,0 +1,46 @@
+{
+  "name": "City",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "City name"
+    },
+    "country": {
+      "type": "string",
+      "description": "Country name"
+    },
+    "region": {
+      "type": "string",
+      "enum": [
+        "europe",
+        "asia",
+        "north_america",
+        "south_america",
+        "africa",
+        "oceania"
+      ],
+      "description": "Geographic region"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "City image URL"
+    },
+    "cost_index": {
+      "type": "number",
+      "description": "Cost index 1-5 (1=cheap, 5=expensive)"
+    },
+    "popularity": {
+      "type": "number",
+      "description": "Popularity score"
+    },
+    "description": {
+      "type": "string",
+      "description": "City description"
+    }
+  },
+  "required": [
+    "name",
+    "country"
+  ]
+}

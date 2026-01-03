@@ -1,0 +1,63 @@
+{
+  "name": "Itinerary",
+  "type": "object",
+  "properties": {
+    "trip_id": {
+      "type": "string",
+      "description": "Associated trip ID"
+    },
+    "day_number": {
+      "type": "number",
+      "description": "Day number in the trip"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Specific date"
+    },
+    "city_id": {
+      "type": "string",
+      "description": "City for this day"
+    },
+    "city_name": {
+      "type": "string",
+      "description": "City name for display"
+    },
+    "activities": {
+      "type": "array",
+      "description": "Activities for this day",
+      "items": {
+        "type": "object",
+        "properties": {
+          "activity_id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "time": {
+            "type": "string"
+          },
+          "cost": {
+            "type": "number"
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "budget": {
+      "type": "number",
+      "description": "Daily budget"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Day notes"
+    }
+  },
+  "required": [
+    "trip_id",
+    "day_number"
+  ]
+}
